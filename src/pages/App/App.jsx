@@ -4,8 +4,11 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import LandingPage from '../LandingPage/LandingPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
+
+
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -22,7 +25,10 @@ export default function App() {
             <Route path="/orders">
               <OrderHistoryPage />
             </Route>
-            <Redirect to="/orders" />
+            <Route path="/home">
+              <LandingPage />
+            </Route>
+            <Redirect to="/home" />
           </Switch>
         </>
         :
