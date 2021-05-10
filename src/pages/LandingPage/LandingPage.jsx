@@ -1,4 +1,4 @@
-import { API_URL, API_KEY, IMAGE_URL, IMAGE_SIZE } from "../../components/API/Config.js"
+import { API_URL, API_KEY, IMAGE_URL } from "../../components/API/Config.js"
 import { useEffect, useState } from "react"
 import MainImage from "./Sections/MainImage.js"
 import { Typography, Row } from 'antd';
