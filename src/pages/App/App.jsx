@@ -7,6 +7,8 @@ import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import LandingPage from '../LandingPage/LandingPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
+import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
+
 
 
 
@@ -18,6 +20,7 @@ export default function App() {
       { user ? 
         <>
           <NavBar user={user} setUser={setUser} />
+          
           <Switch>
             <Route path="/orders/new">
               <NewOrderPage />
@@ -28,8 +31,12 @@ export default function App() {
             <Route path="/home">
               <LandingPage />
             </Route>
+            <Route exact path="/movies/:movieId">
+              <MovieDetailPage />
+            </Route>
             <Redirect to="/home" />
           </Switch>
+          
         </>
         :
         <AuthPage setUser={setUser} />
