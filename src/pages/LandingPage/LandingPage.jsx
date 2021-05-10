@@ -25,8 +25,11 @@ export default function LandingPage() {
         <div style={{ width: '100%', margin: 0}} >
 
           {/* Movie Main Image  */}
+          {
+            Movies.length && 
           <MainImage image={`${IMAGE_URL}w1280${Movies[0].backdrop_path}`} 
           title={Movies[0].original_title} text={Movies[0].overview} />
+          }
 
             {/* Body of Landing Page   */}
             <div style={{ width: '85%', margin: '1rem auto' }}>
