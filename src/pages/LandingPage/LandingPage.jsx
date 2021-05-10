@@ -68,6 +68,7 @@ export default function LandingPage() {
                         image={movie.poster_path &&
                           `${IMAGE_URL}w500${movie.poster_path}`}
                       movieId={movie.id}
+                      key={idx}
                        
                         
                         />
