@@ -10,6 +10,7 @@ export default function MovieDetailPage() {
 
     const [Movie, setMovie] = useState([])
     const [Crews, setCrews] = useState([])
+    const [showCast, setShowCast] = useState(false)
 
     const {movieId} = useParams()
     
@@ -31,6 +32,9 @@ export default function MovieDetailPage() {
             })
     }, [])
 
+        const handleClick = () => {
+            setShowCast(!showCast)
+        }
 
     return (
         <div style={{ width: '100%', margin: 0}} >
@@ -54,9 +58,13 @@ export default function MovieDetailPage() {
       </Descriptions>
           <br/> <br/>
           <div style={{display: 'flex', justifyContent: 'center'}}>
-              <Button>Movie Cast</Button>
+              <Button onClick={handleClick}>Movie Cast</Button>
           </div>
 
+          {/* {cast pics} */}
+
+          {showCast && 
+          
           <Row gutter={[16, 16]} >
                   {Crews && Crews.map((crew, idx) => (
                     <>
@@ -71,6 +79,8 @@ export default function MovieDetailPage() {
                   ))}
 
                 </Row>
+          }
+
 
     </div>
     )
