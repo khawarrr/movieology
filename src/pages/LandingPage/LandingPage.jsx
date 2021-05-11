@@ -1,7 +1,7 @@
 import { API_URL, API_KEY, IMAGE_URL } from "../../components/API/Config.js"
 import { useEffect, useState } from "react"
 import MainImage from "./Sections/MainImage.js"
-import { Typography, Row } from 'antd';
+import { Typography, Row, Col } from 'antd';
 import MovieCard from "./MovieCard/MovieCard.js";
 
 const { Title } = Typography;
@@ -62,8 +62,11 @@ export default function LandingPage() {
                 {/* show many movies in grid layout  */}
 
                 <Row gutter={[16, 16]} >
+                  
                   {Movies && Movies.map((movie, idx) => (
-                    <>
+                    
+
+                      
                       <MovieCard 
                         image={movie.poster_path &&
                           `${IMAGE_URL}w500${movie.poster_path}`}
@@ -72,7 +75,8 @@ export default function LandingPage() {
                        
                         
                         />
-                    </>
+                      
+    
                   ))}
 
                 </Row>

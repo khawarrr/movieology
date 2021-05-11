@@ -8,6 +8,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
+import "antd/dist/antd.css";
 
 
 
@@ -32,7 +33,7 @@ export default function App() {
               <LandingPage />
             </Route>
             <Route exact path="/movies/:movieId">
-              <MovieDetailPage />
+              <MovieDetailPage user={user}/>
             </Route>
             <Redirect to="/home" />
           </Switch>

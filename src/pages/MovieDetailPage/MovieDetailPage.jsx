@@ -4,9 +4,10 @@ import MainImage from "../LandingPage/Sections/MainImage.js"
 import { Descriptions, Button, Row } from "antd"
 import { useParams } from "react-router-dom"
 import MovieCard from "../LandingPage/MovieCard/MovieCard.js"
+import Favorite from "./favSection/Favorite.js"
 
 
-export default function MovieDetailPage() {
+export default function MovieDetailPage (props) {
 
     const [Movie, setMovie] = useState([])
     const [Crews, setCrews] = useState([])
@@ -45,6 +46,8 @@ export default function MovieDetailPage() {
               <MainImage image={`${IMAGE_URL}w1280${Movie.backdrop_path}`} 
                 title={Movie.original_title} text={Movie.overview} />
           }
+
+          <Favorite userFrom={props.user} movieId={movieId} movieInfo={Movie}/>
 
           {/* Movie Info Table */}
         <Descriptions title="Movie Info" bordered>
