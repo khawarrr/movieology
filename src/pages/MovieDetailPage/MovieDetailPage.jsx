@@ -7,6 +7,7 @@ import MovieCard from "../LandingPage/MovieCard/MovieCard.js"
 import Favorite from "./favSection/Favorite.js"
 
 
+
 export default function MovieDetailPage (props) {
 
     const [Movie, setMovie] = useState([])

@@ -9,6 +9,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
 import "antd/dist/antd.css";
+import FavoritePage from '../FavoritePage/FavoritePage';
 
 
 
@@ -34,6 +35,9 @@ export default function App() {
             </Route>
             <Route exact path="/movies/:movieId">
               <MovieDetailPage user={user}/>
+            </Route>
+            <Route exact path="/favorite">
+              <FavoritePage user={user}/>
             </Route>
             <Redirect to="/home" />
           </Switch>
