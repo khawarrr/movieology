@@ -13,6 +13,8 @@ export default function FavoritePage({user}) {
 
     }
 
+
+
 // fetch movie data from mongodb
 
     useEffect(() => {
@@ -28,10 +30,22 @@ export default function FavoritePage({user}) {
         return <tr>
             <td>{movie.movieTitle}</td>
             <td>{movie.movieRunTime}</td>
-            <td><button>Remove</button></td>
+            <td><button onClick={() =>handleClickRemove(movie.movieId, idx)}>Remove</button></td>
         </tr>
 
     })
+
+    
+    async function  handleClickRemove (movieId, idx) {
+        await favApi.removeFavoriteMovie(movieId)
+        const copyFavMovies = [...FavoritedMovies]
+
+        copyFavMovies.splice(idx, 1)
+
+        setFavoritedMovies(copyFavMovies)
+
+
+    }
 
     
 

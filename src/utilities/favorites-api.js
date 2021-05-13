@@ -8,6 +8,11 @@ export function addToFavorite(variable) {
     
 }
 
+export function removeFavoriteMovie(id) {
+    return sendRequest(`${BASE_URL}/${id}`, "DELETE")
+    
+}
+
 export function removeFavorite(id) {
     return sendRequest(`${BASE_URL}/${id}`, "DELETE")
     
