@@ -57,11 +57,18 @@ export default function Favorite(props) {
 
 
     return (
-        <div>
-            <Button onClick={handleClickFav}>{!Favorited ? "Add to Favorite" : "Not Favorite"}{FavoriteNumber}</Button>
+        <>
+        <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+            <Button onClick={handleClickFav}>{!Favorited ? "Add to Favorite" : "Not Favorite"} </Button>
 
-            
         </div>
+
+        <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+    
+        <Button># of Fav: {FavoriteNumber}</Button>
+
+    </div>
+    </>
     )
 }
 

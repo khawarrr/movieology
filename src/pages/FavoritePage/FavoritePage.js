@@ -1,6 +1,6 @@
 import './favorite.css';
 import { useEffect, useState } from 'react';
-import '../../index.css'
+
 
 import * as favApi from '../../utilities/favorites-api';
 
