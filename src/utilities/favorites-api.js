@@ -1,34 +1,27 @@
-import sendRequest from './send-request';
+import sendRequest from "./send-request";
 
-const BASE_URL = '/api/favorites';
-
+const BASE_URL = "/api/favorites";
 
 export function addToFavorite(variable) {
-    return sendRequest(`${BASE_URL}/addToFavorite`, "POST", variable)
-    
+  return sendRequest(`${BASE_URL}/addToFavorite`, "POST", variable);
 }
 
 export function removeFavoriteMovie(id) {
-    return sendRequest(`${BASE_URL}/${id}`, "DELETE")
-    
+  return sendRequest(`${BASE_URL}/${id}`, "DELETE");
 }
 
 export function removeFavorite(id) {
-    return sendRequest(`${BASE_URL}/${id}`, "DELETE")
-    
+  return sendRequest(`${BASE_URL}/${id}`, "DELETE");
 }
-
 
 export function getFavMovies() {
-    return sendRequest(BASE_URL)
+  return sendRequest(BASE_URL);
 }
 
-
 export function getFavNum(id) {
-    return sendRequest(`${BASE_URL}/${id}/favoriteNumber` )
+  return sendRequest(`${BASE_URL}/${id}/favoriteNumber`);
 }
 
 export function favorited(id) {
-    return sendRequest(`${BASE_URL}/${id}/favorited`)
+  return sendRequest(`${BASE_URL}/${id}/favorited`);
 }
-
