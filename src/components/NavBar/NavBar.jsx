@@ -14,14 +14,14 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-<Menu style={{display: 'flex'}}>
+<Menu style={{display: 'flex', justifyContent: 'space-between' }}>
   <Menu.Item key="home" >
     <Link to="/home">MOVIEOLOGY</Link>
     </Menu.Item>
     <Menu.Item key="favorite" >
     <Link to="/favorite">Favorite</Link>
     </Menu.Item>
-    <Menu.Item style={{marginLeft: "450px"}} key="favorite" >
+    <Menu.Item  key="logout" >
       <Link to="" onClick={handleLogOut}>Log Out</Link>
     </Menu.Item>
 </Menu>
